@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moonstone</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+const eventDate = new Date("Jan 1, 2026 00:00:00").getTime();
+
+const timer = setInterval(() => {
+
+  const now = new Date().getTime();
+  const gap = eventDate - now;
+
+  if (gap <= 0) {
+    clearInterval(timer);
+
+    document.getElementById("days").textContent = 0;
+    document.getElementById("hours").textContent = 0;
+    document.getElementById("minutes").textContent = 0;
+    document.getElementById("seconds").textContent = 0;
+
+    document.getElementById("status").textContent = "Starting Soon";
+    return;
+  }
+
+  const d = Math.floor(gap / (1000 * 60 * 60 * 24));
+  const h = Math.floor((gap / (1000 * 60 * 60)) % 24);
+  const m = Math.floor((gap / (1000 * 60)) % 60);
+  const s = Math.floor((gap / 1000) % 60);
+
+  document.getElementById("days").textContent = d;
+  document.getElementById("hours").textContent = h;
+  document.getElementById("minutes").textContent = m;
+  document.getElementById("seconds").textContent = s;
+
+}, 1000);
+
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Tac+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  
+
+    <nav class="nav">
+  <div class="nav-container">
+
+    <!-- Left side -->
+    <div class="brand">
+      <h1>Moontone</h1>
+      <span>2026</span>
+    </div>
+
+    <!-- Right side -->
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">Highlight Event</a>
+      <a href="#">Developer</a>
+      <a href="#" class="register">Check Registration</a>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+
+  <h1 class="hero-title">
+    Moon<br>
+    <span>tone</span>
+  </h1>
+
+  <p class="year">2026</p>
+
+  <div class="hero-buttons">
+    <button class="btn primary">Explore Event</button>
+    <button class="btn secondary">See Timeline</button>
+  </div>
+
+  <div class="countdown">
+
+    <div class="time-box">
+      <span id="days">0</span>
+      <p>Days</p>
+    </div>
+
+    <div class="time-box">
+      <span id="hours">0</span>
+      <p>Hours</p>
+    </div>
+
+    <div class="time-box">
+      <span id="minutes">0</span>
+      <p>Minutes</p>
+    </div>
+
+    <div class="time-box">
+      <span id="seconds">0</span>
+      <p>Seconds</p>
+    </div>
+
+  </div>
+
+  <p id="status">Starting Soon</p>
+
+</section>
+
+
+
+<section class="hero-2">
+
+  <!-- LEFT — VIDEO -->
+  <div class="hero-2-left">
+    <video autoplay muted loop playsinline id="video1">
+      <source src="12391283_1080_1920_30fps.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- RIGHT — TEXT -->
+  <div class="hero-2-right">
+
+    <h4>ABOUT MOONTONE</h4>
+
+    <h1>
+      IT'S <span>BACK</span>
+    </h1>
+
+    <p>
+     The fest is an unbeatable combination of talent and teamwork, featuring nail-biting techno-management competitions, intense sports challenges, exciting club activities, and captivating cultural performances. The fest is an unbeatable combination of talent and teamwork, featuring nail-biting techno-management competitions, exciting sports challenges, exciting club activities, and captivating cultural performances. The fest is an unbeatable combination of talent and teamwork, featuring nail-biting techno-management competitions.
+    </p>
+
+  </div>
+
+</section>
+
+<section class="between">
+
+  <h4>GLIMPSES OF EVENTS</h4>
+
+  <h1>
+    <span>FLASHBACK FRAMES</span>
+  </h1>
+
+  <p>
+    Revisiting the highlights as we gear up for another great year.
+  </p>
+
+</section>
+
+
+
+
+
+<section class="frames">
+
+  <div class="frames-track">
+
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame">
+      <img src="imgnew.jpg">
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="between2">
+
+  <h4>Explore events</h4>
+
+  <h1>
+    <span>Discover What's Happening Next</span>
+  </h1>
+
+  <p>
+   Stay in the loop with the exciting moments unfolding around you. From fresh experiences to <br> major highlights, every event is crafted to spark curiosity and celebration. There’s always <br>something new waiting just around the corner
+  </p>
+
+</section>
+
+
+<section class="special-thanks">
+  <h2>SPECIAL THANKS TO TECH</h2>
+</section>
+
+
+
+<section class="hero-sec2">
+  <div class="hero-left">
+    <img src="imgnew.jpg" alt="HCLTech">
+  </div>
+
+  <div class="hero-right">
+    <p>
+      We sincerely thank HCLTech for their valuable support and partnership in making Moonstone 2026 – Medi-Caps University a success. Your contribution strengthens innovation, learning, and industry collaboration within the student community.
+    </p>
+
+    <h4>Connect with HCLTech</h4>
+
+    <div class="socials">
+      <span>LinkedIn</span>
+      <span>Instagram</span>
+      <span>Twitter</span>
+      <span>Website</span>
+    </div>
+  </div>
+</section>
+
+
+<section class="sponsor-hero">
+
+  <h4>EVENT SPONSORS</h4>
+
+  <h1>
+    <span>SUPPORTING EVERY STEP</span>
+  </h1>
+
+  <p>
+    This year's fest is shaped and strengthened by the support of our sponsors.
+  </p>
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="frames2">
+
+  <div class="frames-track2">
+
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+
+    <div class="frame2">
+      <img src="imgnew.jpg">
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+<section class="faq-hero">
+
+  <h1>FAQ'S</h1>
+
+  <h4>FREQUENTLY ASKED QUESTIONS</h4>
+
+  <p>
+    Find quick answers to the questions you're most likely to have. From event details to general information, everything you need is right here. Explore the FAQs to make your experience smoother.
+  </p>
+
+</section>
+
+
+
+
+
+<section class="faq">
+
+  <div class="faq-item">
+    <button class="faq-question">
+      What is Moontone?
+      <span>+</span>
+    </button>
+    <div class="faq-answer">
+      Moontone is the annual fest featuring tech, cultural, and sports events designed to celebrate talent and teamwork.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      How can I register for events?
+      <span>+</span>
+    </button>
+    <div class="faq-answer">
+      Registration is available through the official portal. Choose your events and confirm participation.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Can I participate in multiple events?
+      <span>+</span>
+    </button>
+    <div class="faq-answer">
+      Yes — you may join multiple events provided schedules do not clash.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Are there prizes for winners?
+      <span>+</span>
+    </button>
+    <div class="faq-answer">
+      Winners receive trophies, certificates, and special recognition.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      How can I become a sponsor or partner?
+      <span>+</span>
+    </button>
+    <div class="faq-answer">
+      Reach out through the sponsorship contact form to explore partnership opportunities.
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+<footer class="footer">
+
+  <!-- LEFT -->
+  <div class="footer-left">
+
+    <h1 class="logo">MOONTONE <span>2026</span></h1>
+
+    <div class="social-icons">
+      <a href="#">in</a>
+      <a href="#">ig</a>
+      <a href="#">yt</a>
+      <a href="#">fb</a>
+    </div>
+
+  </div>
+
+  <!-- CENTER -->
+  <div class="footer-center">
+
+    <div>
+      <p>Highlights</p>
+      <p>Events</p>
+      <p>Developers</p>
+      <p>Sponsors</p>
+    </div>
+
+    <div>
+      <p>Subordinate Clubs</p>
+      <p>Techno</p>
+      <p>Cultural</p>
+      <p>Sports</p>
+    </div>
+
+  </div>
+
+  <!-- RIGHT -->
+  <div class="footer-right">
+
+    <p class="address">
+      A.B., Rau,<br>
+      Indore, Madhya Pradesh<br>
+      45399
+    </p>
+
+    <p>+91 73131XXXX • +91 731311XXXXX</p>
+    <p class="email">director.admissionXXXXXXX</p>
+
+  </div>
+
+</footer>
+
+
+
+
+<section class="footer-bar">
+
+  <div class="footer-bar-left">
+    <h1>MOONSTONE 2K26</h1>
+    <p>DESIGNED & DEVELOPED BY STUDENT DEVELOPERS' COMMUNITY</p>
+  </div>
+
+  <div class="footer-bar-right">
+    <p>2026 — All Rights Reserved.</p>
+  </div>
+
+</section>
+
+
+</body>
+</html>
